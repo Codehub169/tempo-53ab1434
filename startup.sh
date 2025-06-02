@@ -10,6 +10,10 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+# Attempt to fix vulnerabilities which might be causing issues
+echo "Attempting to fix vulnerabilities..."
+npm audit fix --force
+
 # Run the Next.js development server on port 9000
 echo "Starting Next.js development server on port 9000..."
 npm run dev -- -p 9000

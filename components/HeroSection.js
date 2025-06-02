@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section 
       id="hero"
-      className="min-h-screen flex flex-col justify-center items-center text-center p-8 bg-hueneu-neutral-light relative section-padding"
+      className="min-h-screen flex flex-col justify-center items-center text-center p-8 bg-hueneu-neutral-bg relative section-padding"
     >
       {/* Animated Logo Component */}
       <AnimatedLogo />
