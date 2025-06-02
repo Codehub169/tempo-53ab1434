@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-bg text-neutral-dark font-inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-200; /* Or bg-hueneu-secondary for more brand color */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-hueneu-primary rounded-md;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-opacity-80; /* Darken the primary color on hover */
+}
+
+/* Custom utility classes if needed globally */
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Ensure custom animations are available if not directly applied via Tailwind utilities */
+.animate-logo-reveal {
+  animation: logo-reveal 1s ease-out forwards;
+}
+
+.animate-scroll-down {
+  animation: scroll-down 1.5s infinite ease-in-out;
+}
+
+.animate-pop-out {
+  animation: pop-out 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
